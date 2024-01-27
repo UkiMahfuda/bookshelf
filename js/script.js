@@ -180,7 +180,7 @@ function editBookFromComplete(bookId) {
                                 Nama Buku
                             </span>
                         </label>
-                        <input required type="text"id="editBookName" name="editBookName" value="${bookObject.title}" class="text-sm py-2 px-4 min-w-full rounded-md bg-slate-50
+                        <input autocomplete="off" required type="text"id="editBookName" name="editBookName" value="${bookObject.title}" class="text-sm py-2 px-4 min-w-full rounded-md bg-slate-50
 
                         focus:outline-none focus:ring-2
                         focus:ring-green-400 
@@ -191,7 +191,7 @@ function editBookFromComplete(bookId) {
                             Penulis
                         </span>
                     </label>
-                    <input required type="text" id="editBookAuthor" name="editBookAuthor" value="${bookObject.author}" class="text-sm py-2 px-4 min-w-full rounded-md bg-slate-50
+                    <input autocomplete="off" required type="text" id="editBookAuthor" name="editBookAuthor" value="${bookObject.author}" class="text-sm py-2 px-4 min-w-full rounded-md bg-slate-50
                         focus:outline-none focus:ring-2
                         focus:ring-green-400 
                         focus:border-green-400 mb-3">
