@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bookshelf Apps | Dicoding</title>
+</head>
+
+<body class="bg-slate-500">
+    <div class="container mx-auto">
+        <div
+            class=" shadow-lg bg-white rounded-md flex flex-col lg:flex-row justify-evenly m-auto lg:grid lg:grid-cols-3 lg:gap-3">
+
+            <section class=" py-5 px-5 lg:col-start-2">
+
+                <h1
+                    class=" my-3 text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-sky-600">
+                    Bookshelf Apps
+                </h1>
+
+                <div class=" bg-slate-50 p-4 mx-auto rounded-md shadow-md max-w-xl  ">
+                    <form action="#" id="bookForm">
+                        <label for="bookName">
+                            <span class="font-medium mb-4 text-slate-800 after:content-['*'] after:text-red-900 ">
+                                Nama Buku
+                            </span>
+                        </label>
+                        <input required type="text" id="bookName" name="bookName" placeholder="nama buku..." class="text-sm py-2 px-4 min-w-full rounded-md
+                        placeholder:text-slate-300 focus:outline-none focus:ring-2
+                        focus:ring-green-400 
+                        focus:border-green-400">
+                        <br><br>
+                        <label for="bookAuthor">
+                            <span class="font-medium mb-4 text-slate-800 after:content-['*'] after:text-red-900 ">
+                                Penulis
+                            </span>
+                        </label>
+                        <input required type="text" id="bookAuthor" name="bookAuthor" placeholder="penulis..." class="text-sm py-2 px-4 min-w-full rounded-md
+                            placeholder:text-slate-300 focus:outline-none focus:ring-2
+                            focus:ring-green-400 
+                            focus:border-green-400">
+                        <br><br>
+                        <label for="bookYear">
+                            <span class="font-medium mb-4 text-slate-800 after:content-['*'] after:text-red-900 ">
+                                Tahun
+                            </span>
+                        </label>
+                        <input required type="number" id="bookYear" name="bookYear" placeholder="tahun..." class="text-sm py-2 px-4 min-w-full rounded-md
+                            placeholder:text-slate-300 focus:outline-none focus:ring-2
+                            focus:ring-green-400 
+                            focus:border-green-400">
+                        <div class="my-4">
+                            <input type="checkbox" id="checkBox">
+                            <label for="checkBox" class="font-semibold text-sm">Sudah Dibaca</label>
+                        </div>
+                        <button
+                            class="block mx-auto bg-slate-600 text-slate-50 font-semibold px-4 py-2 rounded-full hover:bg-slate-700 transition duration-400 focus:ring focus:ring-slate-600"
+                            type="button" onclick="addBook()">Tambah
+                            Buku</button>
+                    </form>
+                </div>
+
+                <div class=" bg-slate-50 p-4 mx-auto my-5 rounded-md shadow-md max-w-xl">
+                    <label for="searchInput">
+                        <span class="font-medium mb-4 text-slate-800 ">
+                            Cari Buku
+                        </span>
+                    </label>
+                    <input type="text" id="searchInput" oninput="searchBooks()" placeholder="cari buku..." class="text-sm py-2 px-4 min-w-full rounded-md placeholder:text-slate-300 
+                    focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400">
+                </div>
+
+            </section>
+
+            <section class="py-5 px-5 lg:col-start-1 lg:row-start-1">
+                <h2
+                    class=" my-3 text-xl font-bold text-center bg-clip-text text-transparent  bg-gradient-to-r from-emerald-700 to-sky-600">
+                    Buku Yang Belum Dibaca</h2>
+                <div class=" bg-slate-50 px-4 py-7 mx-auto my-5 rounded-md shadow-md max-w-xl">
+                    <ul id="unreadBooks"></ul>
+                </div>
+            </section>
+
+            <section class="py-5 px-5">
+                <h2
+                    class=" my-3 text-xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-emerald-700 to-sky-600">
+                    Buku Yang Telah Dibaca</h2>
+                <div class=" bg-slate-50 px-4 py-7 mx-auto my-5 rounded-md shadow-md max-w-xl">
+                    <ul id="readBooks"></ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
